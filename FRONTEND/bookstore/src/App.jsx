@@ -8,7 +8,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Cart from "./pages/Cart";
 import Aboutus from "./pages/Aboutus";
-import Profile from "./pages/profile";
+import Profile from "./pages/Profile";
 import Contactus from "./pages/Contactus";
 import ViewBookDetails from "./components/ViewBookDetails/ViewBookDetails";
 import { useDispatch, useSelector } from "react-redux";
