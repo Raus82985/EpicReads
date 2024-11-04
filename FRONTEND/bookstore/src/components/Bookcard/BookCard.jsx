@@ -1,24 +1,8 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function BookCard({ data }) {
-  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-  const navigate = useNavigate();
-
-  return isLoggedIn === false ? (
-    <div className="flex flex-col h-screen bg-zinc-900 text-white font-semibold items-center justify-center gap-4">
-      <div className="flex justify-center items-center text-5xl">
-        Please Login
-      </div>
-      <button
-        onClick={() => navigate("/login")}
-        className="mt-6 text-blue-500 hover:text-blue-600 focus:outline-none text-xl"
-      >
-        ← Login
-      </button>
-    </div>
-  ) : (
+  return (
     <div className="max-w-sm mx-auto shadow-lg rounded overflow-hidden transition-transform transform hover:scale-105 duration-300">
       <Link to={`/view-book-details/${data._id}`}>
         <div className="bg-zinc-800 rounded p-6 flex flex-col items-center">
