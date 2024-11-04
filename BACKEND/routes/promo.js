@@ -114,8 +114,11 @@ router.post("/validate-promo", async (req, res) => {
             return res.status(403).json({ message: "You are not allowed to use this promo code." });
         }
 
+        existingPromoCode.usageLimit = existingPromoCode.usageLimit-1;
+        existingPromoCode.save();
         // Return success response with discount details
         return res.status(200).json({
+            
             message: "Promo code is valid.",
             discountType: existingPromoCode.discountType,
             discountValue: existingPromoCode.discountValue,

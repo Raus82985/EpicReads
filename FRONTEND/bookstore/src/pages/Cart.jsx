@@ -3,7 +3,7 @@ import Loader from "../components/Loader/Loader";
 import Notification from "../components/Notification/Notification";
 import { AiFillDelete } from "react-icons/ai";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function Cart() {
@@ -89,7 +89,7 @@ function Cart() {
   const applyCoupon = async () => {
     try {
       const response = await axios.post(
-        "https://epic-reads-hazel.vercel.app/api/v1/validate-promo", // Replace with your actual validation endpoint
+        "https://epic-reads-hazel.vercel.app/api/v1/validate-promo",
         { code: promoCode },
         { headers }
       );
