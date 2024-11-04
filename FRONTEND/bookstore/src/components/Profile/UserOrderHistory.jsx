@@ -23,7 +23,7 @@ function UserOrderHistory() {
     const fetchOrderHistory = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:1000/api/v1/get-order-history",
+          "https://epic-reads-hazel.vercel.app/api/v1/get-order-history",
           { headers }
         );
         setOrderHistory(res.data.books);

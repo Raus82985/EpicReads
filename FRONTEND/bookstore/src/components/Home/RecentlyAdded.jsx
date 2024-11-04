@@ -9,7 +9,7 @@ function RecentlyAdded() {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        "http://localhost:1000/api/v1/get-recent-books"
+        "https://epic-reads-hazel.vercel.app/api/v1/get-recent-books"
       );
       setData(response.data.books);
     };

@@ -30,7 +30,7 @@ function SignupPage() {
     setSuccess(false);
 
     try {
-      const response = await axios.post('http://localhost:1000/api/v1/sign-up', formData);
+      const response = await axios.post('https://epic-reads-hazel.vercel.app/api/v1/sign-up', formData);
       setNotificationMessage('Signup successful!');
       setColor("#32CD32")
       setSuccess(true);

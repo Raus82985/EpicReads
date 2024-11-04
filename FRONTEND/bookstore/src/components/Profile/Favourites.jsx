@@ -34,7 +34,7 @@ function Favourites() {
     const fetch = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:1000/api/v1/get-favourite-books",
+          "https://epic-reads-hazel.vercel.app/api/v1/get-favourite-books",
           { headers }
         );
         setFavbooks(response.data.books || []); // Ensure we always have an array
@@ -55,7 +55,7 @@ function Favourites() {
       };
 
       const res = await axios.put(
-        "http://localhost:1000/api/v1/remove-book-from-favourite",
+        "https://epic-reads-hazel.vercel.app/api/v1/remove-book-from-favourite",
         {},
         { headers }
       );

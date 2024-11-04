@@ -32,7 +32,7 @@ function Login() {
     setNotificationMessage('');
 
     try {
-      const response = await axios.post('http://localhost:1000/api/v1/sign-in', formData);
+      const response = await axios.post('https://epic-reads-hazel.vercel.app/api/v1/sign-in', formData);
       setNotificationMessage('Login successful!');
       setColor("#32CD32");
 

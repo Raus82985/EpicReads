@@ -35,7 +35,7 @@ const Addpromo = () => {
     const fetchPromoCodes = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:1000/api/v1/promos",
+          "https://epic-reads-hazel.vercel.app/api/v1/promos",
           { headers }
         );
         setPromoCodes(response.data);
@@ -59,7 +59,7 @@ const Addpromo = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:1000/api/v1/add-promo",
+        "https://epic-reads-hazel.vercel.app/api/v1/add-promo",
         promoCode,
         { headers }
       );
@@ -89,7 +89,7 @@ const Addpromo = () => {
     setLoading(true);
     try {
       const response = await axios.delete(
-        `http://localhost:1000/api/v1/delete-promo/${id}`,
+        `https://epic-reads-hazel.vercel.app/api/v1/delete-promo/${id}`,
         { headers }
       );
       setNotification(response.data.message);

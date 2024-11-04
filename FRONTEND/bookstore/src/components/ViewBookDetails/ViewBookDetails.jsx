@@ -44,7 +44,7 @@ function ViewBookDetails() {
     const fetchPurchasedBooks = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:1000/api/v1/purchased-books",
+          "https://epic-reads-hazel.vercel.app/api/v1/purchased-books",
           { headers }
         );
         setPurchasedBooks(response.data.books.map((book) => book.id));
@@ -59,7 +59,7 @@ function ViewBookDetails() {
   const handleFavourites = async () => {
     try {
       const response = await axios.put(
-        "http://localhost:1000/api/v1/add-book-to-favourite",
+        "https://epic-reads-hazel.vercel.app/api/v1/add-book-to-favourite",
         {},
         { headers }
       );
@@ -75,7 +75,7 @@ function ViewBookDetails() {
   const handleAddToCart = async () => {
     try {
       const response = await axios.put(
-        "http://localhost:1000/api/v1/add-book-to-cart",
+        "https://epic-reads-hazel.vercel.app/api/v1/add-book-to-cart",
         {},
         { headers }
       );
@@ -94,7 +94,7 @@ function ViewBookDetails() {
     if (window.confirm("Are you sure you want to delete this book?")) {
       try {
         const response = await axios.delete(
-          `http://localhost:1000/api/v1/delete-book/`,
+          `https://epic-reads-hazel.vercel.app/api/v1/delete-book/`,
           { headers }
         );
         showNotification(response.data.message, "#32CD32");
@@ -121,7 +121,7 @@ function ViewBookDetails() {
     const fetch = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:1000/api/v1/get-book-by-id/${id}`
+          `https://epic-reads-hazel.vercel.app/api/v1/get-book-by-id/${id}`
         );
         SetData(response.data.books);
       } catch (err) {

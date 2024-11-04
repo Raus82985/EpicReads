@@ -19,7 +19,7 @@ const AllOrders = () => {
   const fetchAllOrders = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:1000/api/v1/get-all-orders",
+        "https://epic-reads-hazel.vercel.app/api/v1/get-all-orders",
         {
           headers,
         }
@@ -33,7 +33,7 @@ const AllOrders = () => {
   const changeOrderStatus = async (orderId, newStatus) => {
     try {
       await axios.put(
-        `http://localhost:1000/api/v1/update-status/${orderId}`,
+        `https://epic-reads-hazel.vercel.app/api/v1/update-status/${orderId}`,
         { status: newStatus },
         { headers }
       );

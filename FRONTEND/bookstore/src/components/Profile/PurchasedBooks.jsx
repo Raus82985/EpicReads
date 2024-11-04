@@ -33,7 +33,7 @@ const PurchasedBooks = () => {
     const fetchPurchasedBooks = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:1000/api/v1/purchased-books",
+          "https://epic-reads-hazel.vercel.app/api/v1/purchased-books",
           { headers }
         );
         setPurchasedBooks(response.data.books);

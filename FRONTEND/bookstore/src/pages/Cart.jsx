@@ -32,7 +32,7 @@ function Cart() {
     const fetchCart = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:1000/api/v1/get-user-cart",
+          "https://epic-reads-hazel.vercel.app/api/v1/get-user-cart",
           { headers }
         );
         console.log(res.data.data);
@@ -54,7 +54,7 @@ function Cart() {
   const deleteItem = async (bookId) => {
     try {
       await axios.put(
-        `http://localhost:1000/api/v1/remove-book-from-cart`,
+        `https://epic-reads-hazel.vercel.app/api/v1/remove-book-from-cart`,
         {},
         { headers: { ...headers, bookid: bookId } }
       );
@@ -74,7 +74,7 @@ function Cart() {
   const handelorder = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:1000/api/v1/add-book-to-order",
+        "https://epic-reads-hazel.vercel.app/api/v1/add-book-to-order",
         { order: cart },
         { headers }
       );
@@ -89,7 +89,7 @@ function Cart() {
   const applyCoupon = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:1000/api/v1/validate-promo", // Replace with your actual validation endpoint
+        "https://epic-reads-hazel.vercel.app/api/v1/validate-promo", // Replace with your actual validation endpoint
         { code: promoCode },
         { headers }
       );

@@ -30,7 +30,7 @@ function Settings() {
   const fetchUserInfo = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:1000/api/v1/get-user-information",
+        "https://epic-reads-hazel.vercel.app/api/v1/get-user-information",
         { headers }
       );
       setUserInfo(response.data);
@@ -45,7 +45,7 @@ function Settings() {
     e.preventDefault();
     try {
       await axios.put(
-        "http://localhost:1000/api/v1/update-address",
+        "https://epic-reads-hazel.vercel.app/api/v1/update-address",
         { address },
         { headers }
       );
@@ -63,7 +63,7 @@ function Settings() {
     e.preventDefault();
     try {
       await axios.put(
-        "http://localhost:1000/api/v1/change-password",
+        "https://epic-reads-hazel.vercel.app/api/v1/change-password",
         { currentPassword, newPassword },
         { headers }
       );
