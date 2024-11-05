@@ -15,28 +15,21 @@ function Footer() {
         </p>
         <div className="flex space-x-6">
           <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook className="text-white hover:text-blue-500 text-xl transition duration-200" />
-          </a>
-          <a
-            href="https://twitter.com"
+            href="https://x.com/RaushanKum60984"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaTwitter className="text-white hover:text-blue-400 text-xl transition duration-200" />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/_raushan_jaiswal_/?next=%2F"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaInstagram className="text-white hover:text-pink-500 text-xl transition duration-200" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/raushan-kumar-a7b646266/"
             target="_blank"
             rel="noopener noreferrer"
           >
